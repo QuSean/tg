@@ -1558,7 +1558,7 @@ void print_user_list_gw (struct tgl_state *TLSR, void *extra, int success, int n
   mprint_start (ev);
   int i;
   for (i = num - 1; i >= 0; i--) {
-      if (U->username) {
+      if (UL[i]->username) {
       mprintf (ev, " @%s", UL[i]->username);
       }
       mprintf (ev, " (#%d):\n", tgl_get_peer_id (UL[i]->id));
