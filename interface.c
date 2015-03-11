@@ -1561,6 +1561,8 @@ void print_user_list_gw (struct tgl_state *TLSR, void *extra, int success, int n
       if (UL[i]->username) {
       mprintf (ev, " @%s", UL[i]->username);
       }
+      mprintf (ev, " avatar_small: %s", UL[i]->photo_small);
+      mprintf (ev, " avatar_big: %s", UL[i]->photo_big);
       mprintf (ev, " (#%d):\n", tgl_get_peer_id (UL[i]->id));
     mprintf (ev, "\n");
   }
